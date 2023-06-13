@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "나눔바른고딕OTF", "돋움";
+
+}
+
+
+.location {
+    /* background:  rgba(231, 230, 230, 0.673); */
+    margin-top: 10px;
+    margin-left: 17%;
+}
+
+#contents {
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+.page_title {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-size: 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+    box-sizing: border-box;
+}
+
+.tab {
+    box-sizing: border-box;
+    justify-content: center;
+    width: 50%;
+}
+
+.tab ul {
+    list-style-type: none;
+    height: 60px;
+    width: 100%;
+    display: flex;
+
+}
+
+.tab ul li {
+    box-sizing: border-box;
+    height: 100%;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    border: 0.1px solid rgb(170, 170, 170);
+}
+
+.tab ul li a {
+    color: rgb(95, 95, 95);
+    margin: auto;
+    padding: 10px;
+    /*font-size: 18px;*/
+    /*font-weight: 500;*/
+    align-items: center;
+}
+
+.tab ul li.tab-notice {
+    background-color: rgb(18, 182, 96);
+}
+
+.tab ul li.tab-notice a {
+    color: white;
+}
+
+.listView {
+    margin-top: 80px;
+    display: block;
+    padding : 10px 10px 10px 10px;
+    /*border-bottom: solid 0.1px rgb(170, 170, 170);*/
+    margin-bottom: 100px;
+
+}
+
+.listView .listTitle{
+    position: relative;
+    padding : 20px 0px 20px 0px;
+    border-top: 2px solid black;
+    border-bottom: 0.1px solid rgb(170, 170, 170);
+    word-wrap: break-word;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.listTitle .cate {
+    display: inline-block;
+    margin: 0 20px 0 30px;
+    vertical-align: middle;
+    width: 15%;
+    text-align: center;
+}
+
+
+.listTitle .title {
+    display: inline-block;
+    vertical-align: middle;
+    width: 65%;
+}
+.listTitle .date {
+    display: inline-block;
+    min-width: 80px;
+    vertical-align: middle;
+    text-align: left;
+    width: 20%;
+    word-wrap: break-word;
+}
+
+h3{
+    display: block;
+}
+
+.listView .listCont {
+    display: block;
+    padding: 20px 20px 20px 20px;
+    border-bottom: 0.1px solid rgb(170, 170, 170);
+    min-height: 600px;
+    max-height: 1000px;
+}
+
+
+.listCont textarea{
+    width: 100%;
+    padding : 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: none;
+    outline: none;
+    height: 600px;
+    overflow: hidden;
+    resize: none;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.cont-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cont-img img {
+    max-width: 90%;
+}
+
+
+.listBtm{
+    text-align: right;
+    margin-top: 20px;
+}
+
+#listBtn {
+
+    text-align: center;
+    display: inline-block;
+    float: right;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 35px;
+}
+
+

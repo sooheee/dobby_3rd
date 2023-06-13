@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    font-family: "나눔바른고딕OTF", "돋움";
+}
+
+
+.contents {
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto 0;
+    padding: 20px;
+
+}
+
+.product-topview {
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+    /* border-bottom: 1px solid #e5e5e5; */
+}
+
+.product-topview img {
+    max-width: 50%;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 100px;
+}
+
+.product-detail {
+    width: 100%;
+}
+
+.product-detail h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-detail p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: black;
+
+}
+
+.star-wrap {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.star-wrap span {
+    margin-right: 10px;
+}
+
+.star-wrap i {
+    color: green;
+    font-size: 17px;
+}
+
+.star-rating {
+    margin-left: 5px;
+}
+
+.product-hashtag {
+    display: flex;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.product-hashtag a {
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #777777;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+.product-guide {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.product-guide dl {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-guide dt {
+    font-weight: bold;
+    margin-right: 40px;
+}
+.product-guide .discount-price{
+    font-size: 18px;
+    margin-right: 15px;
+}
+.product-guide .discount-rate {
+    color: red;
+}
+
+.product-guide .original-price {
+    text-decoration: line-through;
+    font-size: 15px;
+}
+
+.product-guide span {
+    margin-right: 5px;
+}
+
+
+.product-purchase div {
+    display: flex;
+    align-items: center;
+}
+
+.product-purchase div p {
+    margin-right: 5px;
+}
+
+.product-purchase dl {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-purchase dt {
+    font-weight: bold;
+    margin-right: 40px;
+    font-size: 17px;
+    padding-right: 40px;
+}
+
+.purchase-sum p {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.purchase-sum p span{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.purchase-num {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.purchase-num dt {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.btn-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.btn-wrap .heart-icon{
+   background-color: white;
+    color : black;
+    border: 1px solid black;
+
+}
+
+.product-inquirylink h4{
+    text-align: left;
+
+}
+.product-inquirylink .inquiry-btn{
+    background-color: black;
+
+    color : white;
+    float: right;
+
+}
+
+
+button[type="button"] {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 5px;
+    background-color: #006633;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*button[type="button"]:hover {*/
+/*    background-color: #004d26;*/
+/*}*/
+
+/* 탭 스타일 */
+.product-tab{
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-top: 70px;
+}
+.tabType {
+    margin-top: 20px;
+
+}
+
+.tabType ul {
+    display: flex;
+    list-style-type: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.tabType li {
+    flex-grow: 1;
+}
+
+.tabType button {
+    width: 100%;
+    padding: 15px 0;
+    background: white;
+    color: #999;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    border-bottom: 2px solid transparent;
+}
+
+.tabType button:hover {
+    background: #006633;
+    color: white;
+}
+
+.tabType button.current {
+    background: #006633;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    text-align: center;
+
+}
+
+.tab-content.active {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.tab-content {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    text-align: left;
+}
+
+.product-noticeWrap {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.product-noticetitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-notice {
+    padding-left: 20px;
+}
+
+.product-noticelist {
+    list-style-type: none;
+}
+
+.product-noticelist .num {
+    font-weight: bold;
+}
+
+.product-noticelist li {
+    margin-bottom: 10px;
+}
+
+.bulListTypeNum, .bulListType3 {
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+.ftColor2 {
+    color: #ff0000;
+}
+
+.product-inquirylink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+/*--------------------------------------------*/
+
+
+.quantity {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.quantity button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 18px;
+    background-color: #f6f6f6;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.quantity button:hover {
+    background-color: #e5e5e5;
+    color : white;
+}
+
+.quantity input {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+/*------------------------------*/
+div#tab1{
+    background-color: white;
+    border: none;
+}
+.tab-contents #tab1 img {
+    display: block;
+    margin: auto;
+    width: 780px;
+}
+
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: white;
+    /*color: inherit; !* 텍스트 색상을 상위 요소와 동일하게 설정 *!*/
+}
+
+a:hover {
+    text-decoration: none; /* 마우스를 올렸을 때만 밑줄이 나타나게 함 */
+
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}

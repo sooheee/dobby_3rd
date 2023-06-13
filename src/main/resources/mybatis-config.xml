@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="useGeneratedKeys" value="true"/>
+
+    </settings>
+
+    <typeAliases>
+        <!--   user     -->
+        <typeAlias alias="UserDto" type="com.dobby.project.user.domain.UserDto"/>
+
+        <!--   admin - YoungHoon     -->
+        <typeAlias alias="InvDto" type="com.dobby.project.admin.domain.InvDto"/>
+        <typeAlias alias="invSearchCondition" type="com.dobby.project.admin.domain.invSearchCondition"/>
+        <typeAlias alias="AdminDto" type="com.dobby.project.admin.domain.AdminDto"/>
+
+        <!--    soo    -->
+        <typeAlias alias="NoticeDto"  type="com.dobby.project.notice.domain.NoticeDto"/>
+        <typeAlias alias="CounselDto" type="com.dobby.project.counsel.domain.CounselDto"/>
+        <typeAlias alias="AnswerDto"  type="com.dobby.project.counsel.domain.AnswerDto"/>
+        <typeAlias alias="CounselAnswerDto"  type="com.dobby.project.counsel.domain.CounselAnswerDto"/>
+        <typeAlias alias="BbsFileDto" type="com.dobby.project.counsel.domain.BbsFileDto"/>
+        <typeAlias alias="MemberDto"  type="com.dobby.project.counsel.domain.MemberDto"/>
+        <typeAlias alias="ProdDto"  type="com.dobby.project.counsel.domain.ProdDto"/>
+        <typeAlias alias="SearchCondition" type="com.dobby.project.counsel.domain.SearchCondition"/>
+
+
+
+        <!--    hwa    -->
+        <typeAlias alias="CartDto" type="com.dobby.project.cart.dto.CartDto"/>
+        <typeAlias alias="CartProdDto" type="com.dobby.project.cart.dto.CartProdDto"/>
+        <typeAlias alias="MbrDto" type="com.dobby.project.order.dto.MbrDto"/>
+        <typeAlias alias="DlvDto" type="com.dobby.project.order.dto.DlvDto"/>
+        <typeAlias alias="OrdDto" type="com.dobby.project.order.dto.OrdDto"/>
+        <typeAlias alias="OrdProdDto" type="com.dobby.project.order.dto.OrdProdDto"/>
+        <typeAlias alias="DlvpnLogDto" type="com.dobby.project.order.dto.DlvpnLogDto"/>
+        <typeAlias alias="PointDto" type="com.dobby.project.order.dto.PointDto"/>
+        <typeAlias alias="ProdCntDto" type="com.dobby.project.orderList.dto.ProdCntDto"/>
+        <typeAlias alias="OrdProdInfoDto" type="com.dobby.project.orderList.dto.OrdProdInfoDto"/>
+
+        <!--    sun    -->
+        <typeAlias alias="ProductDto" type="com.dobby.project.product.domain.ProductDto"/>
+        <typeAlias alias="ProductDCDto" type="com.dobby.project.product.domain.ProductDCDto"/>
+        <typeAlias alias="ProductCateDto" type="com.dobby.project.product.domain.ProductCateDto"/>
+        <typeAlias alias="TotalDto" type="com.dobby.project.product.domain.TotalDto"/>
+        <typeAlias alias="ProductFileDto" type="com.dobby.project.product.domain.ProductFileDto"/>
+        <typeAlias alias="SortDto" type="com.dobby.project.product.domain.SortDto"/>
+
+
+
+    </typeAliases>
+
+
+</configuration>

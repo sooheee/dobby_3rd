@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-family: "나눔바른고딕OTF", "돋움";
+}
+
+a {
+    text-decoration: none;
+    color: #777777;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #777777;
+}
+
+#menu {
+    padding: 30px 20px 20px 20px;
+    width: 170px;
+    border-right: 1px solid rgba(231, 230, 230, 0.673);
+}
+
+#menu a p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #777777;
+}
+#menu a {
+    text-decoration: none;
+    color: #777777;
+}
+

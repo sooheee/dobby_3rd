@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "나눔바른고딕OTF", "돋움";
+
+}
+#pagetitle{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.tab {
+    padding: 20px 0 10px 0;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tab ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tab ul li {
+    text-align: center;
+    background-color: white;
+    border: 0.5px solid #d0d0d0;
+    width: 50%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.tab ul li span {
+    color: black;
+    font-size: 16px;
+}
+
+
+#W {
+    background-color: rgb(18, 182, 96);
+}
+
+#W span {
+    color: white;
+}
+                
+.counselInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0 30px 0;
+    border-bottom: 0.5px solid #dcdcdc;
+}
+
+.counselInfo .img {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counselInfo .infoDetail {
+    flex: 8.5;
+    line-height: 1.7;
+}
+
+.infoDetail .txt1 {
+    font-size: 20px;
+    font-weight: 550;
+    padding-bottom: 5px;
+    color: #222222;
+    
+}
+
+.infoDetail .txt2{
+    font-size: 15px;
+    color: #d72137;
+}
+.infoDetail p {
+    font-size: 15px;
+    color: #777777;
+}
+
+/* 테이블 */
+table {
+    padding: 20px 0 0 0;
+    width: 100%;
+}
+
+tr {
+    margin: 20px 0 20px 0;
+}
+
+th {
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px 10px 10px 50px;
+}
+
+#content, #phone {
+    vertical-align: top;
+    padding: 15px 10px 10px 50px;
+}
+
+td {
+    text-align: left;
+    padding: 10px 0 10px 0;
+    /* 가운데 정렬 */
+}
+
+input[type="text"],
+textarea {
+    border-radius: 0;
+    outline: none;
+    border: solid 0.5px #dcdcdc;
+}
+
+td input[type="text"], td p {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    height: 30px;
+    /* width: 100px; */
+    padding: 5px 8px 5px 8px;
+}
+
+td textarea {
+    width: 633px;
+    height: 250px;
+    padding: 8px 8px 8px 8px;
+    resize: none;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+}
+
+td input[type="text"]#title {
+    width: 633px;
+    height: 35px;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+}
+
+.info {
+    padding: 0 0 20px 15px;
+}
+
+.btnList{
+    text-align: center;
+    margin: 80px 0 50px 0;
+}
+
+button {
+    vertical-align: middle;
+    border: solid 0.5px #000000;
+    margin-right: 10px; 
+}
+
+#regBtn {
+    background-color: #000000;
+    color:#ffffff;
+    font-size: 16px;
+    height: 50px;
+    width: 120px;
+}
+
+#canBtn {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    height: 50px;
+    width: 120px;
+}
+
+#imgBtn {
+    background-color: #f3f3f3;
+    color: #000000;
+    font-size: 13px;
+    height: 35px;
+    padding: 0 5px 0 5px;
+    width: 150px;
+}
+
+#prodSearchBtn {
+    background-color: #f3f3f3;
+    color: #000000;
+    font-size: 13px;
+    height: 35px;
+    padding: 0 5px 0 5px;
+    width: 120px;
+}
+
+#prodName_input{
+    border: none;
+    height: 30px;
+    width: 200px;
+}
+
+.hyphen {
+    margin: 0 4.5px 0 4.5px;
+}
+
+#counList {
+    height: 35px;
+    width: 150px;
+    border: 1px solid #a7a7a7;
+    outline: none;
+    padding-left: 8px;
+}
+
+#counList option {
+    border-radius: 0;
+    outline: none;
+    border: solid 0.5px #dcdcdc;
+    padding-left: 8px;
+}
+
+.bottom_info {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: solid 0.5px #dcdcdc;
+}
+.bottom_info p {
+    font-size: 13px;
+    color:#d72137;
+}
+
+.push {
+    margin-top: 5px;
+}
+
+/* :root {
+    accent-color: rgb(18, 182, 96);
+} */
+
+input[type="radio"]:checked+label span {
+    accent-color: rgb(18, 182, 96);
+}
