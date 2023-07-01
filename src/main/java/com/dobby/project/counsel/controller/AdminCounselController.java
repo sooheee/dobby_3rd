@@ -22,7 +22,10 @@ import java.util.Map;
 public class AdminCounselController {
     @Autowired
     CounselService counselService;
-
+    // CNSL_ID = 상담글 번호 (전체)
+    // CONTENT = 상담글 내용
+    // STUS = 상담 글 상태
+    // ANS_YN = 답변 유무
     @PostMapping("/admin/counsel/write")
     public String answerWrite(@RequestParam Integer CNSL_ID, @RequestParam String CONTENT
             ,Model m,  RedirectAttributes rttr) throws Exception {
@@ -49,7 +52,7 @@ public class AdminCounselController {
                 @RequestParam(defaultValue = "10") Integer pageSize, Model m,
                 HttpSession session, RedirectAttributes rattr) throws Exception {
             AdminDto adminDto = (AdminDto) session.getAttribute("admin");
-            // 로그인 체크 유무 코드
+            // 관리자 로그인 체크 유무 코드
             if (session.getAttribute("admin") == null) {
                 rattr.addFlashAttribute("msg", "login_ERR");
                 return "redirect:/admin/login";

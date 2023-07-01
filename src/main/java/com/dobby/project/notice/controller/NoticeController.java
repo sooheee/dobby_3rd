@@ -20,6 +20,7 @@ public class NoticeController {
     @Autowired
     NoticeService noticeService;
 
+    //NB_ID = 공지사항 게시물 번호
     @GetMapping("/read")    // 게시물 읽기
     public String noticeRead(@RequestParam(defaultValue ="1") Integer page,
                              @RequestParam(defaultValue ="10") Integer pageSize,
