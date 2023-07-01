@@ -107,7 +107,7 @@ public class AdminProductController {
 
         try {
             // "/img/product/product-image/" 여기에 저장되는 각자 주소 넣으면 됩니다.
-            String uploadFolder = "C:\\Users\\hntim\\IdeaProjects\\dobby_clone\\src\\main\\webapp\\resources\\img\\product\\product-image";
+            String uploadFolder = "C:\\IdeaProjects\\dobby\\src\\main\\webapp\\resources\\img\\product\\product-image";
 
             // 대표 이미지 처리
             String fileRealName = file.getOriginalFilename();
@@ -198,7 +198,7 @@ public class AdminProductController {
             String detailImagePath = productService.getDetailImgPath(id);
 
 
-            String uploadFolder = "C:\\Users\\hntim\\IdeaProjects\\dobby_clone\\src\\main\\webapp\\resources";
+            String uploadFolder = "C:\\IdeaProjects\\dobby\\src\\main\\webapp\\resources";
 
 
             // 2. 해당 파일을 삭제한다.

@@ -28,12 +28,14 @@ public class CounselController {
         return "counsel/counselMain";
     }
 
+    // cnslId = 상담글 번호
     @PostMapping("/mypage/counsel/remove")
     public String counselRemove(Integer cnslId, Model m) throws Exception{
         counselService.removeCounsel(cnslId);
         return "redirect:/mypage/counsel/list";
     }
 
+    // MBR_ID = 회원 아이디
     @GetMapping("/mypage/counsel/write") // 1:1 상담 작성 폼(글쓰기)
     public String counselWriteForm(Model m, HttpServletRequest request, RedirectAttributes rttr) throws Exception {
 

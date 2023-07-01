@@ -22,6 +22,7 @@ public class AdminNoticeController {
     @Autowired
     NoticeService noticeService;
 
+    // NB_ID = 공지사항 글 번호
     @GetMapping("/modify")  // 수정하기 위해 기존 데이터 읽어오기
     public String adminNoticeModifyForm(@RequestParam(defaultValue ="1") Integer page,
                                         @RequestParam(defaultValue ="10") Integer pageSize,Integer NB_ID, Model m ) throws Exception {
@@ -139,7 +140,7 @@ public class AdminNoticeController {
                                   HttpSession session , RedirectAttributes rattr) throws Exception {
 
         AdminDto adminDto = (AdminDto) session.getAttribute("admin");
-        // 로그인 체크 유무 코드
+        // 관리자 로그인 체크 코드
         if (session.getAttribute("admin") == null) {
             rattr.addFlashAttribute("msg", "login_ERR");
             return "redirect:/admin/login";

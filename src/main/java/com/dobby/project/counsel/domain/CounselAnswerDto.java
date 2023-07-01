@@ -79,9 +79,7 @@ public class CounselAnswerDto {
         this.PROD_NM = PROD_NM;
     }
 
-    public String getCATE_ID() {
-        return CATE_ID;
-    }
+    public String getCATE_ID() { return CATE_ID; }
 
     public void setCATE_ID(String CATE_ID) {
         this.CATE_ID = CATE_ID;
