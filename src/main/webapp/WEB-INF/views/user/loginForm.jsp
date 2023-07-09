@@ -128,7 +128,7 @@
                 <div class="login-opt">
                     <button  id="dologin" class="btnA btn_blue loginbtn">로그인</button>
                 </div>
-                <rm>
+<%--                <rm>--%>
 
                     <div class="etc_login">
                         <button class="kakao-btn" type="button" data-key="KA" data-val="KAKAO">
