@@ -21,6 +21,7 @@
     <title>로그인 | 도비스프리</title>
     <link rel="stylesheet" href="./css/user/login.css"/>
     <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -136,6 +137,10 @@
                         </button>
                         <button class="kakao-btn" type="button" data-key="KA" data-val="KAKAO" id="kakao-logout-btn" style="display: none"></button>
                     </div>
+<%--      네이버 로그인         --%>
+                    <div id="naver_id_login">
+
+                    </div>
                     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
                     <script>
                         const token = document.cookie
@@ -178,6 +183,16 @@
                             },
                         });
                     </script>
+
+                <script type="text/javascript">
+                    var naver_id_login = new naver_id_login("YOUR_CLIENT_ID", "YOUR_CALLBACK_URL");
+                    var state = naver_id_login.getUniqState();
+                    naver_id_login.setButton("white", 2,40);
+                    naver_id_login.setDomain("YOUR_SERVICE_URL");
+                    naver_id_login.setState(state);
+                    naver_id_login.setPopup();
+                    naver_id_login.init_naver_id_login();
+                </script>
                     <ul class="bottom_menu">
                         <li>
                             <a href="/findID" id="search_id">아이디 찾기</a>
@@ -189,7 +204,7 @@
                     </ul>
                     <button class="btnA btn_white btn_join_membership">
                         <span>아직 회원이 아니세요?</span>
-                        <em><a href="/register" style="text-decoration: none; color: #252525";>회원가입</a></em>
+                        <em><a href="/register" style="text-decoration: none; color: #252525">회원가입</a></em>
                     </button>
         </div>
     </div>
