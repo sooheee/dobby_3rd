@@ -22,8 +22,11 @@ public class AdminNoticeController {
     @Autowired
     NoticeService noticeService;
 
-    // NB_ID = 공지사항 글 번호
-    @GetMapping("/modify")  // 수정하기 위해 기존 데이터 읽어오기
+    // 메서드명 : adminNoticeModifyForm
+    // 기   능 : 이미 작성된 공지사항을 수정하기 위해 데이터를 읽어오는 기능
+    // 매개변수 : Integer page, Integer pageSize, Integer NB_ID(공지사항 게시물 번호), Model m
+    // 반환타입 : String
+    @GetMapping("/modify")
     public String adminNoticeModifyForm(@RequestParam(defaultValue ="1") Integer page,
                                         @RequestParam(defaultValue ="10") Integer pageSize,Integer NB_ID, Model m ) throws Exception {
 //        System.out.println("NoticeController - NB_ID: " + NB_ID);
@@ -40,7 +43,11 @@ public class AdminNoticeController {
         return "notice/adminNoticeRead";
     }
 
+    // 메서드명 : adminNoticeModify
+    // 기   능 : 공지사항 게시물을 수정 후 등록
+    // 매개변수 : NoticeDto noticeDto, Integer page, Integer pageSize, RedirectAttributes rttr, Model m
 
+    // 반환타입 :
     @PostMapping("/modify") // 수정 후 데이터 보내기
     public String adminNoticeModify(NoticeDto noticeDto, @RequestParam(defaultValue ="1") Integer page,
                                     @RequestParam(defaultValue ="10") Integer pageSize, RedirectAttributes rttr, Model m) throws Exception {
@@ -65,7 +72,10 @@ public class AdminNoticeController {
         }
     }
 
-
+    // 메서드명 : adminNoticeRemove
+    // 기   능 : 공지사항 게시물을 삭제하는 기능 (게시물 수정 페이지에서 가능)
+    // 매개변수 : Integer NB_ID(게시물 번호), Integer page, Integer pageSize, Model m, RedirectAttributes rttr
+    // 반환타입 : String
     @PostMapping("/remove") // 게시물 수정 페이지에서의 삭제
     public String adminNoticeRemove(Integer NB_ID, Integer page, Integer pageSize, Model m, RedirectAttributes rttr) throws Exception {
         // 나중에 String WRTR 추가하기, 관리자 계정(이름)
@@ -82,6 +92,10 @@ public class AdminNoticeController {
         return "redirect:/admin/notice/list";
     }
 
+    // 메서드명 : adminNoticeRead
+    // 기   능 : 관리자페이지에서 공지사항 게시물을 읽어오는 기능 (제목 클릭)
+    // 매개변수 : Integer page, Integer pageSize,Integer NB_ID(게시물 번호), Model m , RedirectAttributes rttr
+    // 반환타입 : String
     @GetMapping("/read") // 게시물 제목 누르면 읽기 전용
     public String adminNoticeRead(Integer page, Integer pageSize,Integer NB_ID, Model m , RedirectAttributes rttr) throws Exception {
         System.out.println("NoticeController - NB_ID: " + NB_ID);
@@ -103,6 +117,10 @@ public class AdminNoticeController {
         return "notice/adminNoticeRead";
     }
 
+    // 메서드명 : adminNoticeWriteForm
+    // 기   능 : 공지사항 게시물을 등록 양식을 불러오는 기능
+    // 매개변수 : Model m
+    // 반환타입 : String
     @GetMapping("/write")   // 게시물 등록 폼
     public String adminNoticeWriteForm(Model m) throws Exception {
 
@@ -117,7 +135,10 @@ public class AdminNoticeController {
 
     }
 
-
+    // 메서드명 : adminNoticeWrite
+    // 기   능 : 관리자페이지에서 공지사항을 등록하는 기능 (데이터 보내기)
+    // 매개변수 : Model m, NoticeDto noticeDto, RedirectAttributes rttr
+    // 반환타입 : String
     @PostMapping("/write")  // 게시물 등록 후 데이터 보내기, 성공, 실패 확인
     public String adminNoticeWrite(Model m, NoticeDto noticeDto, RedirectAttributes rttr) throws Exception {
         try {
@@ -133,7 +154,10 @@ public class AdminNoticeController {
         return "redirect:/admin/notice/list";
     }
 
-
+    // 메서드명 : adminNoticeList
+    // 기   능 : 관리자 페이지에서 공지사항 게시물 목록을 불러오는 기능
+    // 매개변수 : Integer page, Integer pageSize, Model m, HttpSession session, RedirectAttributes rattr
+    // 반환타입 : String
     @GetMapping("/list")    // 목록 읽어오기
     public String adminNoticeList(@RequestParam(defaultValue ="1") Integer page,
                                   @RequestParam(defaultValue = "10")Integer pageSize, Model m,

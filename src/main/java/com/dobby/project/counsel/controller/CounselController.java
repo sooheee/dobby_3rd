@@ -22,12 +22,19 @@ public class CounselController {
     @Autowired
     CounselService counselService;
 
+    // 메서드명 : counselMain
+    // 기   능 : 고객센터 게시판 안내 페이지 (공지사항, 1:1 상담 페이지로 이동가능)
+    // 매개변수 : 없음
+    // 반환타입 : String
     @GetMapping("/cs/counsel/main") // 고객센터 1:1 상담 안내
     public String counselMain() throws Exception {
 
         return "counsel/counselMain";
     }
-
+    // 메서드명 : counselRemove
+    // 기   능 : 회원이 작성한 상담글 삭제하는 기능(회원 본인만 삭제 가능)
+    // 매개변수 : cnslId, m
+    // 반환타입 :
     // cnslId = 상담글 번호
     @PostMapping("/mypage/counsel/remove")
     public String counselRemove(Integer cnslId, Model m) throws Exception{

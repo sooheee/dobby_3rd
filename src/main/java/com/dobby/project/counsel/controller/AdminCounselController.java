@@ -20,12 +20,13 @@ import java.util.Map;
 @Controller
 //@RequestMapping("/admin/counsel")
 public class AdminCounselController {
-    @Autowired
+    @Autowired  // 상담 CRUD service 주입
     CounselService counselService;
-    // CNSL_ID = 상담글 번호 (전체)
-    // CONTENT = 상담글 내용
-    // STUS = 상담 글 상태
-    // ANS_YN = 답변 유무
+
+    // 메서드명 : answerWrite
+    // 기   능 : 관리자가 회원 상담글에 답변 작성
+    // 매개변수 : Integer CNSL_ID(회원 상담글 번호), String CONTENT(답변 내용)
+    // 반환타입 : String
     @PostMapping("/admin/counsel/write")
     public String answerWrite(@RequestParam Integer CNSL_ID, @RequestParam String CONTENT
             ,Model m,  RedirectAttributes rttr) throws Exception {
@@ -47,8 +48,12 @@ public class AdminCounselController {
 
 
 
+    // 메서드명 : adminCounselList
+    // 기   능 : 관리자 페이지에서 모든 회원의 상담 목록을 불러옴
+    // 매개변수 : Integer page, Integer pageSize, Model m, HttpSession session, RedirectAttr
+    // 반환타입 : String
     @GetMapping("/admin/counsel/list")
-        public String AdminCounselList (@RequestParam(defaultValue = "1") Integer page,
+        public String adminCounselList (@RequestParam(defaultValue = "1") Integer page,
                 @RequestParam(defaultValue = "10") Integer pageSize, Model m,
                 HttpSession session, RedirectAttributes rattr) throws Exception {
             AdminDto adminDto = (AdminDto) session.getAttribute("admin");
