@@ -24,17 +24,16 @@ public class CounselController {
 
     // 메서드명 : counselMain
     // 기   능 : 고객센터 게시판 안내 페이지 (공지사항, 1:1 상담 페이지로 이동가능)
-    // 매개변수 : 없음
-    // 반환타입 : String
     @GetMapping("/cs/counsel/main") // 고객센터 1:1 상담 안내
     public String counselMain() throws Exception {
 
         return "counsel/counselMain";
     }
+
+
+
     // 메서드명 : counselRemove
     // 기   능 : 회원이 작성한 상담글 삭제하는 기능(회원 본인만 삭제 가능)
-    // 매개변수 : cnslId, m
-    // 반환타입 :
     // cnslId = 상담글 번호
     @PostMapping("/mypage/counsel/remove")
     public String counselRemove(Integer cnslId, Model m) throws Exception{
@@ -42,9 +41,12 @@ public class CounselController {
         return "redirect:/mypage/counsel/list";
     }
 
-    // MBR_ID = 회원 아이디
+
+
+    // 메서드명 : counselWriteForm
+    // 기   능 : 회원이 1:1 상담을 작성하기 위해 회원 정보를 불러오는 메서드
     @GetMapping("/mypage/counsel/write") // 1:1 상담 작성 폼(글쓰기)
-    public String counselWriteForm(Model m, HttpServletRequest request, RedirectAttributes rttr) throws Exception {
+    public String counselWriteForm(Model m, HttpServletRequest request) throws Exception {
 
 
             // 로그인 체크
@@ -56,7 +58,6 @@ public class CounselController {
                 session.setAttribute("toURL", "/mypage/counsel/write");
                 return "redirect:/login"; // 로그인 페이지로 이동
             }
-            // 회원 이름, 전화번호 미리 불러오기
             // 세션에서 MBR_ID를 가져옴
             String mbrId = (String) session.getAttribute("MBR_ID");
 
@@ -74,6 +75,10 @@ public class CounselController {
         return "counsel/counselWrite";
     }
 
+
+
+    // 메서드명 : prodPopGET
+    // 기   능 : 문의제품 목록을 불러오는 메서드
     @GetMapping("/mypage/counsel/write/prodPop")
     public String prodPopGET(@RequestParam(defaultValue ="1") Integer page,
                            @RequestParam(defaultValue = "10") Integer pageSize,Model m) throws Exception{
@@ -95,6 +100,10 @@ public class CounselController {
         return "counsel/counselProdPop";
     }
 
+
+
+    // 메서드명 : counselWrite
+    // 기   능 : 1:1 상담 작성 후 데이터 전달하는 메서드
     @PostMapping("/mypage/counsel/write")   // 1:1 상담 작성 후 데이터 전달
     public String counselWrite(Model m, CounselDto counselDto, RedirectAttributes rttr){
 
@@ -112,6 +121,9 @@ public class CounselController {
     }
 
 
+
+    // 메서드명 : counselList
+    // 기   능 : 회원별 1:1 상담 목록 리스트 조회
     @GetMapping("/mypage/counsel/list") // 1:1 상담 작성 리스트 조회
     public String counselList(@RequestParam(defaultValue ="1") Integer page, HttpServletRequest request,
                               @RequestParam(defaultValue = "10") Integer pageSize, Model m) throws Exception {

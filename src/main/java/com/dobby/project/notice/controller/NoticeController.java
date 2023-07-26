@@ -22,8 +22,7 @@ public class NoticeController {
 
     // 메서드명 : noticeRead
     // 기   능 : 공지사항 게시물을 읽어오는 기능 (회원)
-    // 매개변수 : Integer page, Integer pageSize, Integer NB_ID(게시물 번호), Model m, RedirectAttributes rttr
-    // 반환타입 : String
+    // Integer NB_ID(게시물 번호)
     @GetMapping("/read")    // 게시물 읽기
     public String noticeRead(@RequestParam(defaultValue ="1") Integer page,
                              @RequestParam(defaultValue ="10") Integer pageSize,
@@ -52,9 +51,7 @@ public class NoticeController {
 
     // 메서드명 : noticeList
     // 기   능 : 공지사항 게시물 목록을 불러오는 기능 (한 페이지당 10개 게시물)
-    // 매개변수 : Integer page, Integer pageSize, Model m
-    // 반환타입 : String
-    @GetMapping("/list")    // 게시물 목록 조회
+    @GetMapping("/list")   // 게시물 목록 조회
     public String noticeList(@RequestParam(defaultValue ="1") Integer page,
                              @RequestParam(defaultValue = "10") Integer pageSize, Model m) throws Exception {
 

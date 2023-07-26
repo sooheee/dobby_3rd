@@ -25,8 +25,7 @@ public class AdminCounselController {
 
     // 메서드명 : answerWrite
     // 기   능 : 관리자가 회원 상담글에 답변 작성
-    // 매개변수 : Integer CNSL_ID(회원 상담글 번호), String CONTENT(답변 내용)
-    // 반환타입 : String
+    // Integer CNSL_ID(회원 상담글 번호), String CONTENT(답변 내용)
     @PostMapping("/admin/counsel/write")
     public String answerWrite(@RequestParam Integer CNSL_ID, @RequestParam String CONTENT
             ,Model m,  RedirectAttributes rttr) throws Exception {
@@ -50,8 +49,6 @@ public class AdminCounselController {
 
     // 메서드명 : adminCounselList
     // 기   능 : 관리자 페이지에서 모든 회원의 상담 목록을 불러옴
-    // 매개변수 : Integer page, Integer pageSize, Model m, HttpSession session, RedirectAttr
-    // 반환타입 : String
     @GetMapping("/admin/counsel/list")
         public String adminCounselList (@RequestParam(defaultValue = "1") Integer page,
                 @RequestParam(defaultValue = "10") Integer pageSize, Model m,
