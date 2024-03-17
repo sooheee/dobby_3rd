@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="![로고_투명](https://github.com/sooheee/Dobby_3rd/assets/128885628/bc7ba1dc-438a-46a9-97fb-ba452d7bc8bb)
-" width="600"/>
+  <img src="https://github.com/sooheee/Dobby_3rd/assets/128885628/bc7ba1dc-438a-46a9-97fb-ba452d7bc8bb" width="600"/>
 </div>
 
 # 도비스프리 Dobby Is Free
@@ -38,7 +37,7 @@ In this era where the world is captivated by Korea, we have endeavored to contri
 
 ### **ERD**
 <div align="center">
-  <img src="![ERD테이블 옮긴 최종(PNG)](https://github.com/sooheee/Dobby_3rd/assets/128885628/2568dfff-d7a6-4679-bb1c-67136e8abb5c)" width="100%"/>
+  <img src="https://github.com/sooheee/Dobby_3rd/assets/128885628/2568dfff-d7a6-4679-bb1c-67136e8abb5c" width="100%"/>
 </div>
 이 프로젝트의 47개의 테이블과 6개의 모듈로 이루어져 있습니다.
 This project contains 47 tables and 6 modules.
